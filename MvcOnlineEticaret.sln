@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcOnlineEticaret", "MvcOnlineEticaret\MvcOnlineEticaret.csproj", "{E008F1F5-E025-45A3-9D22-095AA25D3E6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E008F1F5-E025-45A3-9D22-095AA25D3E6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E008F1F5-E025-45A3-9D22-095AA25D3E6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E008F1F5-E025-45A3-9D22-095AA25D3E6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E008F1F5-E025-45A3-9D22-095AA25D3E6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC9DC2A4-F65D-41D9-AEA0-60C70A6D5F45}
+	EndGlobalSection
+EndGlobal

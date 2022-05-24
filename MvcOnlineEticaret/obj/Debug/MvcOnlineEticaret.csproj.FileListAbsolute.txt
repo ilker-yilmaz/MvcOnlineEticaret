@@ -77,3 +77,7 @@ C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\obj\Debug\MvcOnl
 C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\obj\Debug\MvcOnlineEticaret.csproj.CopyComplete
 C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\obj\Debug\MvcOnlineEticaret.dll
 C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\obj\Debug\MvcOnlineEticaret.pdb
+C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\EntityFramework.dll
+C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\EntityFramework.SqlServer.dll
+C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\EntityFramework.xml
+C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\EntityFramework.SqlServer.xml

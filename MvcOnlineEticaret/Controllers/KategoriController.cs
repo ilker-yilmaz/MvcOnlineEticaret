@@ -40,5 +40,12 @@ namespace MvcOnlineEticaret.Controllers
             var kategori = c.Kategoris.Find(id);
             return View("KategoriGetir", kategori);
         }
+        public ActionResult KategoriGuncelle(Kategori k)
+        {
+            var ktgr = c.Kategoris.Find(k.KategoriID); //sayfadaki id'nin hafızaya alınması
+            ktgr.KategoriAd = k.KategoriAd;//yeni değerin atanması
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

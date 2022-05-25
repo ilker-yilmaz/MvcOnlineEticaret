@@ -16,5 +16,17 @@ namespace MvcOnlineEticaret.Controllers
             var degerler = c.Kategoris.ToList();
             return View(degerler);
         }
+        [HttpGet]
+        public ActionResult KategoriEkle()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult KategoriEkle(Kategori k)
+        {
+            c.Kategoris.Add(k);
+            c.SaveChanges(); //değişiklikleri kaydet
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -15,6 +15,7 @@
         <th>SATIŞ FİYAT</th>
         <th>KATEGORİ</th>
         <th>GÖRSEL</th>
+        <th>Sil</th>
     </tr>
     @foreach (var u in Model)
     {
@@ -27,6 +28,9 @@
             <td>@u.SatisFiyat</td>
             <td>@u.Kategori.KategoriAd</td>
             <td>@u.UrunGorsel</td>
+            <td>
+                <a href="/Urun/UrunSil/@u.Urunid" class="btn btn-danger">Sil</a>
+            </td>
         </tr>
     }
 </table>

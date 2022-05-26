@@ -28,5 +28,13 @@ namespace MvcOnlineEticaret.Controllers
             c.SaveChanges(); //değişiklikleri kaydet
             return RedirectToAction("Index");
         }
+
+        public ActionResult UrunSil(int id)
+        {
+            var deger = c.Uruns.Find(id);
+            deger.Durum = false;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

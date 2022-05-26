@@ -6,8 +6,9 @@
 <br />
 <h2>Ürün Güncelleme Sayfası</h2>
 <br />
-@using (Html.BeginForm("UrunGuncelle","Urun", FormMethod.Post))
+@using (Html.BeginForm("UrunGuncelle", "Urun", FormMethod.Post))
 {
+    @Html.HiddenFor(x => x.Urunid)
     @Html.LabelFor(x => x.UrunAd)
     @Html.TextBoxFor(x => x.UrunAd, new { @class = "form-control" })
     <br />

@@ -57,5 +57,19 @@ namespace MvcOnlineEticaret.Controllers
             var urundeger = c.Uruns.Find(id);
             return View("UrunGetir",urundeger);
         }
+        public ActionResult UrunGuncelle(Urun p)
+        {
+            var urn = c.Uruns.Find(p.Urunid);
+            urn.AlisFiyat = p.AlisFiyat;
+            urn.Durum = p.Durum;
+            urn.Kategoriid = p.Kategoriid;
+            urn.Marka = p.Marka;
+            urn.SatisFiyat = p.SatisFiyat;
+            urn.Stok = p.Stok;
+            urn.UrunAd = p.UrunAd;
+            urn.UrunGorsel = p.UrunGorsel;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -28,6 +28,8 @@ namespace MvcOnlineEticaret.Models.Sınıflar
         [StringLength(50)]
         public string CariMail { get; set; }
 
+        public bool Durum { get; set; }
+
         public ICollection<SatisHareket> SatisHarekets { get; set; }
     }
 }

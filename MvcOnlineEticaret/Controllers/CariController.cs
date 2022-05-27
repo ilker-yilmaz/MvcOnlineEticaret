@@ -13,7 +13,7 @@ namespace MvcOnlineEticaret.Controllers
         Context c = new Context();
         public ActionResult Index()
         {
-            var degerler = c.Carilers.ToList();
+            var degerler = c.Carilers.Where(x => x.Durum == true).ToList();
             return View(degerler);
         }
         [HttpGet]
@@ -24,7 +24,15 @@ namespace MvcOnlineEticaret.Controllers
         [HttpPost]
         public ActionResult YeniCari(Cariler p)
         {
+            p.Durum = true;
             c.Carilers.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult CariSil(int id)
+        {
+            var cr = c.Carilers.Find(id);
+            cr.Durum = false;
             c.SaveChanges();
             return RedirectToAction("Index");
         }

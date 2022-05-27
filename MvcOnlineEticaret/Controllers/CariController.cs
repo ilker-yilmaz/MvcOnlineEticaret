@@ -16,5 +16,17 @@ namespace MvcOnlineEticaret.Controllers
             var degerler = c.Carilers.ToList();
             return View(degerler);
         }
+        [HttpGet]
+        public ActionResult YeniCari()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult YeniCari(Cariler p)
+        {
+            c.Carilers.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

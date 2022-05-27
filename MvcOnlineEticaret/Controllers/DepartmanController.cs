@@ -16,5 +16,19 @@ namespace MvcOnlineEticaret.Controllers
             var degerler = c.Departmans.ToList();
             return View(degerler);
         }
+
+        [HttpGet]
+        public ActionResult DepartmanEkle()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult DepartmanEkle(Departman d)
+        {
+            c.Departmans.Add(d);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

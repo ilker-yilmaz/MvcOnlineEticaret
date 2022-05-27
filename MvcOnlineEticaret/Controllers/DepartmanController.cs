@@ -30,5 +30,12 @@ namespace MvcOnlineEticaret.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult DepartmanSil(int id)
+        {
+            var dep = c.Departmans.Find(id);
+            dep.Durum = false;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

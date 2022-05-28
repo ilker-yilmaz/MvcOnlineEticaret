@@ -80,7 +80,7 @@ namespace MvcOnlineEticaret.Controllers
             ViewBag.dgr2 = deger2;
             ViewBag.dgr3 = deger3;
             var deger = c.SatisHarekets.Find(id);
-            return View("SatisGetir",deger);
+            return View("SatisGetir", deger);
         }
         public ActionResult SatisGuncelle(SatisHareket p)
         {
@@ -94,7 +94,11 @@ namespace MvcOnlineEticaret.Controllers
             deger.Urunid = p.Urunid;
             c.SaveChanges();
             return RedirectToAction("Index");
-
+        }
+        public ActionResult SatisDetay(int id)
+        {
+            var degerler = c.SatisHarekets.Where(x => x.Satisid == id).ToList();
+            return View(degerler);
         }
     }
 }

@@ -5,20 +5,23 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<table class="table table-bordered"
+<table id="tbl1" class="table table-bordered"
        style="margin-top:20px">
-    <tr>
-        <th>ID</th>
-        <th>Ürün</th>
-        <th>Cari</th>
-        <th>Personel</th>
-        <th>Adet</th>
-        <th>Fiyat</th>
-        <th>Toplam</th>
-        <th>Tarih</th>
-        <th>Güncelle</th>
-        <th>Detaylar</th>
-    </tr>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ürün</th>
+            <th>Cari</th>
+            <th>Personel</th>
+            <th>Adet</th>
+            <th>Fiyat</th>
+            <th>Toplam</th>
+            <th>Tarih</th>
+            <th>Güncelle</th>
+            <th>Detaylar</th>
+        </tr>
+    </thead>
+    
 
     @foreach (var k in Model)
     {
@@ -37,7 +40,7 @@
             </td>
             <td>
                 <a href="/Satis/SatisDetay/@k.Satisid"
-                   class="btn btn-default" 
+                   class="btn btn-default"
                    style="background-color:lightcoral; color:white">Detaylar</a>
             </td>
         </tr>
@@ -46,3 +49,23 @@
 </table>
 
 <a href="/Satis/YeniSatis" class="btn btn-info">Yeni Satış Yap</a>
+
+
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+
+$('#tbl1').dataTable({});
+
+</script>

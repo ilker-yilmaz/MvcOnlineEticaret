@@ -34,5 +34,18 @@ namespace MvcOnlineEticaret.Controllers
             var fatura = c.Faturalars.Find(id);
             return View("FaturaGetir",fatura);
         }
+        public ActionResult FaturaGuncelle(Faturalar f)
+        {
+            var fatura = c.Faturalars.Find(f.Faturaid);
+            fatura.FaturaSeriNo = f.FaturaSeriNo;
+            fatura.FaturaSıraNo = f.FaturaSıraNo;
+            fatura.Saat = f.Saat;
+            fatura.Tarih = f.Tarih;
+            fatura.TeslimAlan = f.TeslimAlan;
+            fatura.TeslimEden = f.TeslimEden;
+            fatura.VergiDairesi = f.VergiDairesi;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

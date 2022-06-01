@@ -85,3 +85,4 @@ C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\PagedList.dl
 C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\PagedList.Mvc.dll
 C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\PagedList.xml
 C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\PagedList.Mvc.xml
+C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\QRCoder.dll

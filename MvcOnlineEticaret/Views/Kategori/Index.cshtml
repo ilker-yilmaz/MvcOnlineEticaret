@@ -28,4 +28,6 @@
 
 </table>
 
+@Html.PagedListPager((IPagedList)Model, sayfa=>Url.Action("Index", new { sayfa}))
+
 <a href="/Kategori/KategoriEkle" class="btn btn-primary">Kategori Ekle</a>

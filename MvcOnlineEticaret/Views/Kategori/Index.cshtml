@@ -1,5 +1,7 @@
 ﻿@using MvcOnlineEticaret.Models.Sınıflar
-@model List<Kategori>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Kategori>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -8,7 +10,6 @@
 <table class="table table-bordered"
        style="margin-top:20px">
     <tr>
-        <th>ID</th>
         <th>Kategori</th>
         <th>Sil</th>
         <th>Güncelle</th>
@@ -17,9 +18,6 @@
     @foreach (var k in Model)
     {
         <tr>
-            <td>
-                @k.KategoriID
-            </td>
             <td>
                 @k.KategoriAd
             </td>

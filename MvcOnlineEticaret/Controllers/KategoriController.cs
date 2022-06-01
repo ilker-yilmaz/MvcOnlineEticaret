@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcOnlineEticaret.Models.Sınıflar;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MvcOnlineEticaret.Controllers
 {
@@ -11,9 +13,9 @@ namespace MvcOnlineEticaret.Controllers
     {
         // GET: Kategori
         Context c = new Context();
-        public ActionResult Index()
+        public ActionResult Index(int sayfa = 1)
         {
-            var degerler = c.Kategoris.ToList();
+            var degerler = c.Kategoris.ToList().ToPagedList(sayfa,4);
             return View(degerler);
         }
         [HttpGet]
@@ -47,5 +49,27 @@ namespace MvcOnlineEticaret.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Deneme()
+        {
+            Class3 cs = new Class3();
+            cs.Kategoriler = new SelectList(c.Kategoris, "KategoriID", "KategoriAd");
+            cs.Urunler = new SelectList(c.Uruns, "Urunid", "UrunAd");
+            return View(cs);
+        }
+        public JsonResult UrunGetir(int p)
+        {
+            var urunlistesi = (from x in c.Uruns
+                               join y in c.Kategoris
+                               on x.Kategori.KategoriID equals y.KategoriID
+                               where x.Kategori.KategoriID == p
+                               select new
+                               {
+                                   Text = x.UrunAd,
+                                   Value = x.Urunid.ToString()
+                               }).ToList();
+            return Json(urunlistesi, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

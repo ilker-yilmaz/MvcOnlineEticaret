@@ -81,3 +81,7 @@ C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\EntityFramew
 C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\EntityFramework.SqlServer.dll
 C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\EntityFramework.xml
 C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\EntityFramework.SqlServer.xml
+C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\PagedList.dll
+C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\PagedList.Mvc.dll
+C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\PagedList.xml
+C:\Users\eymen\source\repos\MvcOnlineEticaret\MvcOnlineEticaret\bin\PagedList.Mvc.xml

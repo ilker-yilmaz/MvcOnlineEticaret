@@ -21,30 +21,49 @@
 
     @foreach (var k in Model)
     {
-<tr>
-    <td>@k.FaturaSeriNo @k.FaturaSıraNo</td>
-    <td>@k.Tarih</td>
-    <td>@k.Saat</td>
-    <td>@k.Toplam ₺</td>
-    <td>
-        <a href="/Fatura/FaturaGetir/@k.Faturaid"
-           class="btn btn-warning">Güncelle</a>
-    </td>
-    <td>
-        <a href="/Fatura/FaturaDetay/@k.Faturaid"
-           class="btn btn-default" style="background-color:lightcoral; color:white">Detaylar</a>
-    </td>
-    <td>
-        <a href="/Fatura/FaturaDetay/@k.Faturaid"
-           class="btn btn-default" style="background-color:dodgerblue; color:white">Popup</a>
-    </td>
-    <td>
-        <a href="/Fatura/FaturaDetay/@k.Faturaid"
-           class="btn btn-default" style="background-color:thistle; color:white">Kalem</a>
-    </td>
-</tr>
+        <tr>
+            <td>@k.FaturaSeriNo @k.FaturaSıraNo</td>
+            <td>@k.Tarih</td>
+            <td>@k.Saat</td>
+            <td>@k.Toplam ₺</td>
+            <td>
+                <a href="/Fatura/FaturaGetir/@k.Faturaid"
+                   class="btn btn-warning">Güncelle</a>
+            </td>
+            <td>
+                <a href="/Fatura/FaturaDetay/@k.Faturaid"
+                   class="btn btn-default" style="background-color:lightcoral; color:white">Detaylar</a>
+            </td>
+            <td>
+                <a href="/Fatura/FaturaDetay/@k.Faturaid"
+                   class="btn btn-default" style="background-color:dodgerblue; color:white">Popup</a>
+            </td>
+            <td>
+                <a href="/Fatura/FaturaDetay/@k.Faturaid"
+                   class="btn btn-default" style="background-color:thistle; color:white">Kalem</a>
+            </td>
+        </tr>
     }
 
 </table>
 
 <a href="/Fatura/FaturaEkle" class="btn btn-info">Yeni Fatura Girişi</a>
+<br />
+<br />
+<button type="button" 
+        class="btn btn-warning" 
+        style="background-color:#d95151; 
+        color:white" data-toggle="modal" 
+        data-target="#Modal1">
+    Popup Penceresi</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Popup Diyalog Ekranı</h2>
+            </div>
+            
+        </div>
+    </div>
+</div>

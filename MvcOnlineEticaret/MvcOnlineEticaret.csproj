@@ -130,6 +130,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CariController.cs" />
+    <Compile Include="Controllers\CariPanelController.cs" />
     <Compile Include="Controllers\DepartmanController.cs" />
     <Compile Include="Controllers\FaturaController.cs" />
     <Compile Include="Controllers\GaleriController.cs" />
@@ -155,7 +156,10 @@
     <Compile Include="Models\Sınıflar\FaturaKalem.cs" />
     <Compile Include="Models\Sınıflar\Faturalar.cs" />
     <Compile Include="Models\Sınıflar\Gider.cs" />
+    <Compile Include="Models\Sınıflar\KargoDetay.cs" />
+    <Compile Include="Models\Sınıflar\KargoTakip.cs" />
     <Compile Include="Models\Sınıflar\Kategori.cs" />
+    <Compile Include="Models\Sınıflar\mesajlar.cs" />
     <Compile Include="Models\Sınıflar\Personel.cs" />
     <Compile Include="Models\Sınıflar\SatisHareket.cs" />
     <Compile Include="Models\Sınıflar\SinifGrup.cs" />
@@ -2904,6 +2908,9 @@
     <Content Include="webpanel\vendor\bootstrap\js\bootstrap.min.js.map" />
     <Content Include="webpanel\vendor\jquery\jquery.min.map" />
     <Content Include="webpanel\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Views\Shared\_CariLayout.cshtml" />
+    <Content Include="Views\CariPanel\Index.cshtml" />
+    <Content Include="Views\CariPanel\Partial2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

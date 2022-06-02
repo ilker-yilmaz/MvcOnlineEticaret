@@ -8,6 +8,7 @@ using MvcOnlineEticaret.Models.Sınıflar;
 
 namespace MvcOnlineEticaret.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: Login

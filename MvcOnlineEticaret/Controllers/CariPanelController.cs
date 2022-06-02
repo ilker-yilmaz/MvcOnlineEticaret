@@ -22,10 +22,27 @@ namespace MvcOnlineEticaret.Controllers
             ViewBag.mid = mailid;
             var toplamsatis = c.SatisHarekets.Where(x => x.Cariid == mailid).Count();
             ViewBag.toplamsatis = toplamsatis;
-            var toplamtutar = c.SatisHarekets.Where(x => x.Cariid == mailid).Sum(y => y.ToplamTutar).ToString("#,##0.00");
-            ViewBag.toplamtutar = toplamtutar;
-            var toplamurunsayisi = c.SatisHarekets.Where(x => x.Cariid == mailid).Sum(y => y.Adet);
-            ViewBag.toplamurunsayisi = toplamurunsayisi;
+            var toplamtutar = c.SatisHarekets.Where(x => x.Cariid == mailid).Sum(y => (decimal?)y.ToplamTutar);
+            if (toplamtutar == null)
+            {
+                ViewBag.toplamtutar = 0.00;
+            }
+            else
+            {
+                ViewBag.toplamtutar = toplamtutar;
+            }
+            var toplamurunsayi = c.SatisHarekets.Where(x => x.Cariid == mailid).Sum(y => (int?)y.Adet);
+            if (toplamurunsayi == null)
+            {
+                ViewBag.toplamurunsayisi = 0;
+            }
+            else
+            {
+                ViewBag.toplamurunsayisi = toplamurunsayi;
+            }
+            //ViewBag.toplamtutar = toplamtutar;
+            //var toplamurunsayisi = c.SatisHarekets.Where(x => x.Cariid == mailid).Sum(y => y.Adet);
+            //ViewBag.toplamurunsayisi = toplamurunsayisi;
             var adsoyad = c.Carilers.Where(x => x.CariMail == mail).Select(y => y.CariAd + " " + y.CariSoyad).FirstOrDefault();
             ViewBag.adsoyad = adsoyad;
 

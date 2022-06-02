@@ -7,6 +7,7 @@ using MvcOnlineEticaret.Models.Sınıflar;
 
 namespace MvcOnlineEticaret.Controllers
 {
+    [Authorize]
     public class DepartmanController : Controller
     {
         // GET: Departman

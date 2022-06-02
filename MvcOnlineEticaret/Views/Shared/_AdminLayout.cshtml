@@ -55,10 +55,13 @@
                             Ürünler
                         </a>
 
-                        <a class="nav-link" href="/Departman/Index">
-                            <div class="sb-nav-link-icon"><i class="fas fa-bars"></i></div>
-                            Departmanlar
-                        </a>
+                        @if (User.IsInRole("A"))
+                        {
+                            <a class="nav-link" href="/Departman/Index">
+                                <div class="sb-nav-link-icon"><i class="fas fa-bars"></i></div>
+                                Departmanlar
+                            </a>
+                        }
 
                         <a class="nav-link" href="/Cari/Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
@@ -142,10 +145,13 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-university"></i></div>
                             Ürün Detay
                         </a>
-                        <a class="nav-link" href="/istatistik/KolayTablolar/">
-                            <div class="sb-nav-link-icon"><i class="fas fa-car"></i></div>
-                            Hızlı Bakış
-                        </a>
+                        @if (User.IsInRole("A"))
+                        {
+                            <a class="nav-link" href="/istatistik/KolayTablolar/">
+                                <div class="sb-nav-link-icon"><i class="fas fa-car"></i></div>
+                                Hızlı Bakış
+                            </a>
+                        }
 
                     </div>
                 </div>

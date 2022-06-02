@@ -142,6 +142,7 @@
     <Compile Include="Controllers\CariController.cs" />
     <Compile Include="Controllers\CariPanelController.cs" />
     <Compile Include="Controllers\DepartmanController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\FaturaController.cs" />
     <Compile Include="Controllers\GaleriController.cs" />
     <Compile Include="Controllers\GrafikController.cs" />
@@ -2950,6 +2951,7 @@
     <Content Include="Views\Grafik\Index5.cshtml" />
     <Content Include="Views\Grafik\Index6.cshtml" />
     <Content Include="Views\Grafik\Index7.cshtml" />
+    <Content Include="Views\Error\PageError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
